@@ -1,122 +1,113 @@
 <!DOCTYPE html>
-<html>
-<title>RSS Team 3</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+<html lang="en">
+<head>
+    <title>RSS Team 3</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Modern CSS framework -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
 
-body, html {
-  height: 100%;
-  line-height: 1.8;
-}
+        .hero-section {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/mit.jpg");
+            background-position: center;
+            background-size: cover;
+            height: 30vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-top: 4rem;
+        }
 
-/* Full height image header */
-.title_img {
-  background-position: center;
-  background-size: cover;
-  background-image: url("../img/mit.jpg");
-  height: 30%;
-  /* max-height: 30%; */
-}
+        .lab-card {
+            transition: transform 0.2s ease-in-out;
+        }
 
-.w3-bar .w3-button {
-  padding: 16px;
-}
-</style>
+        .lab-card:hover {
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
 
+<body class="bg-gray-50">
+    <!-- Navbar -->
+    <nav class="fixed w-full bg-white shadow-md z-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <a href="../#home" class="text-xl font-bold text-gray-800">RSS Team 3</a>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="../index.html" class="text-gray-600 hover:text-gray-900">Home</a>
+                    <a href="./" class="text-gray-600 hover:text-gray-900">Labs</a>
+                    <a href="https://github.com/rss2025-3" class="text-gray-600 hover:text-gray-900">
+                        <i class="fab fa-github"></i> Github
+                    </a>
+                </div>
 
-<body>
-<!-- If you change something in the Navbar you have to change it on each page (sit on top) -->
-<!-- MAKE SURE YOU GET THE RELATIVE PATHS RIGHT FOR THE NAV BAR!!!!-->
-<div class="w3-top">
-  <div class="w3-bar w3-white w3-card" id="myNavbar">
-    <a href="../#home" class="w3-bar-item w3-button w3-wide">RSS Team 3</a>
-    <!-- Right-sided navbar links -->
-    <div class="w3-right w3-hide-small">
-      <a href="../#about" class="w3-bar-item w3-button">About</a>
-      <a href="./" class="w3-bar-item w3-button"><i class="fa fa-folder"></i> Labs</a>
-      <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="w3-bar-item w3-button"><i class="fa fa-camera"></i>Videos</a>
-      <a href="https://github.com/rss2025-3" class="w3-bar-item w3-button"><i class="fa fa-github-square"></i>Github</a>
-    </div>
-    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
-
-    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
-      <i class="fa fa-bars"></i>
-    </a>
-  </div>
-</div>
-
-
-<!-- Sidebar on small screens when clicking the menu icon -->
-<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
-  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close X</a>
-  <a href="../#about" onclick="w3_close()" class="w3-bar-item w3-button">About</a>
-  <a href="./" onclick="w3_close()" class="w3-bar-item w3-button">Labs</a>
-  <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" onclick="w3_close()" class="w3-bar-item w3-button">Videos</a>
-  <a href="https://github.com/mit-rss" onclick="w3_close()" class="w3-bar-item w3-button">Github</a>
-</nav>
-
-<header class="title_img w3-display-container w3-grayscale-min">
-  <div class="w3-display-bottommiddle w3-text-white w3-center">
-    <h1 class="w3-center" style="font-weight:bold">LAB WORK</h1> </br>
-    <p class="w3-center" style="font-weight:bold">What we've done for Robotics: Science and Systems</p>
-  </div>
-</header>
-  <!-- End of repeated content on each page-->
-
-  <!-- Lab Sections -->
-  <div class="w3-row-padding w3-white">
-    <!-- Example Lab -->
-    <div class="w3-col l6 m6 w3-margin-bottom" style="margin-top:16px;max-width:50%">
-      <div class="w3-card w3-center" style="min-height:600px">
-        </br>
-        <img src="img/IMG_2840.jpeg" alt="Survival" style="width:95%" onclick="onClick(this)" class="w3-hover-opacity">
-        <div class="w3-container" style="margin-top:auto">
-          <h3><a href="lab_3">Lab 3: Wall Follower</h3>
-          <p>Wall following and safety controller using the robot</p>
-          <p><a href="lab_3"><button class="w3-button w3-light-grey w3-block"><i class="fa fa-info-circle"></i> More info</button></a></p>
+                <!-- Mobile menu button -->
+                <button class="md:hidden" onclick="toggleMenu()">
+                    <i class="fas fa-bars text-gray-600"></i>
+                </button>
+            </div>
         </div>
-      </div>
-    </div>
-  <!-- end the lab section -->
-  </div>
 
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-white">
+            <a href="../#about" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">About</a>
+            <a href="./" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Labs</a>
+            <a href="https://github.com/rss2025-3" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Github</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-section flex items-center justify-center">
+        <div class="text-center text-white">
+            <h1 class="text-5xl font-bold mb-4">Labs</h1>
+        </div>
+    </header>
+
+    <!-- Labs Section -->
+    <section class="py-12 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Example Lab Card -->
+                <a href="lab_3" class="lab-card bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl">
+                    <img src="img/IMG_2840.jpeg" alt="Wall Follower" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-2">Lab 3: Wall Follower</h3>
+                        <p class="text-gray-600">Wall following and safety controller using the robot</p>
+                    </div>
+                </a>
+                <!-- Add more lab cards here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <a href="#" class="inline-block bg-gray-800 px-6 py-2 rounded-full hover:bg-gray-700 transition mb-4">
+                <i class="fas fa-arrow-up mr-2"></i>Back to top
+            </a>
+            <p class="text-gray-400">2025 RSS Team 3</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        }
+    </script>
 </body>
-
-<!-- Footer -->
-<footer class="w3-center w3-black w3-padding-64">
-  <a href="#labs" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
-  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
-</footer>
-
-<script>
-// Modal Image Gallery
-function onClick(element) {
-  document.getElementById("img01").src = element.src;
-  document.getElementById("modal01").style.display = "block";
-  var captionText = document.getElementById("caption");
-  captionText.innerHTML = element.alt;
-}
-
-// Toggle between showing and hiding the sidebar when clicking the menu icon
-var mySidebar = document.getElementById("mySidebar");
-
-function w3_open() {
-  if (mySidebar.style.display === 'block') {
-    mySidebar.style.display = 'none';
-  } else {
-    mySidebar.style.display = 'block';
-  }
-}
-
-// Close the sidebar with the close button
-function w3_close() {
-    mySidebar.style.display = "none";
-}
-</script>
-
 </html>
