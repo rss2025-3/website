@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>RSS Team 3</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Modern CSS framework -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- MathJax for LaTeX -->
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+            tex2jax: {inlineMath: [['$','$']], displayMath: [['$$','$$']], skipTags: ["script","noscript","style","textarea","code"]},
+            TeX: {equationNumbers: {autoNumber: "AMS"}}
+        });
+    </script>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML"></script>
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        .title-img {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../img/mit.jpg");
+            background-position: center;
+            background-size: cover;
+            height: 30vh;
+            padding-top: 4rem;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50">
+    <!-- Navbar -->
+    <nav class="fixed w-full bg-white shadow-md z-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <a href="../../index.html" class="text-xl font-bold text-gray-800">RSS Team 3</a>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="../../index.html" class="text-gray-600 hover:text-gray-900">Home</a>
+                    <a href="../" class="text-gray-600 hover:text-gray-900">Labs</a>
+                    <!-- <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="text-gray-600 hover:text-gray-900">
+                        <i class="fa fa-camera"></i> Videos
+                    </a> -->
+                    <a href="https://github.com/rss2025-3" class="text-gray-600 hover:text-gray-900">
+                        <i class="fab fa-github"></i> Github
+                    </a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <button class="md:hidden" onclick="toggleMenu()">
+                    <i class="fas fa-bars text-gray-600"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-white">
+            <a href="../../#about" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">About</a>
+            <a href="../" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Labs</a>
+            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Videos</a>
+            <a href="https://github.com/rss2025-3" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Github</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="title-img flex items-center justify-center">
+        <div class="text-center text-white">
+            <h1 class="text-5xl font-bold mb-4">Lab 5: Localization</h1>
+        </div>
+    </header>
+
+    <!-- Lab Content -->
+    <div class="max-w-7xl mx-auto px-4 py-12">
+        <div class="bg-white rounded-lg shadow-lg p-8">
+            <!-- Presentation Link -->
+            <div class="mb-8">
+                <a href="https://docs.google.com/presentation/d/1CTmjr_UPUAL4QlnkrpBozYt_-AZIbfAC83X_ShYjyoU/edit?usp=sharing" 
+                   class="text-blue-600 hover:text-blue-800 font-medium flex items-center">
+                    <i class="fas fa-presentation mr-2"></i>
+                    View Presentation
+                </a>
+            </div>
+
+            <!-- Embedded Presentation -->
+            <div class="presentation-container" style="position: relative; width: 100%; padding-top: 62.5%;">
+                <iframe 
+                    src="https://docs.google.com/presentation/d/1CTmjr_UPUAL4QlnkrpBozYt_-AZIbfAC83X_ShYjyoU/embed?start=false&loop=false&delayms=3000" 
+                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;"
+                    allowfullscreen="true" 
+                    mozallowfullscreen="true" 
+                    webkitallowfullscreen="true">
+                </iframe>
+            </div>
+
+            <!-- PDF Section -->
+            <!-- <div class="mt-12">
+                <div class="flex justify-between items-center mb-4">
+                    <h2 class="text-2xl font-bold">Lab Report</h2>
+                    <a href="RSS_Lab_4_Visual_Servoing.pdf" 
+                       download
+                       class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg flex items-center">
+                        <i class="fas fa-download mr-2"></i>
+                        Download PDF
+                    </a>
+                </div>
+                <div class="pdf-container" style="position: relative; width: 100%; padding-top: 141.4%;">
+                    <iframe 
+                        src="RSS_Lab_4_Visual_Servoing.pdf"
+                        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;"
+                        type="application/pdf">
+                    </iframe>
+                </div>
+            </div> -->
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center">
+                <a href="../" class="bg-gray-800 px-6 py-2 rounded-full hover:bg-gray-700 transition">
+                    <i class="fa fa-arrow-left mr-2"></i>Lab Home
+                </a>
+                <a href="#" class="bg-gray-800 px-6 py-2 rounded-full hover:bg-gray-700 transition">
+                    <i class="fa fa-arrow-up mr-2"></i>To the top
+                </a>
+            </div>
+            <p class="text-center text-gray-400 mt-4">RSS Team 3 - 2025</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        }
+    </script>
+</body>
+</html>
